@@ -4,6 +4,7 @@
   "description": "test azurewebsites connection",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
