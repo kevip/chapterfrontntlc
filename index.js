@@ -6,7 +6,7 @@ app.get('/', (req, resp) => {
 
     return resp.send(`
         <h1>Mi primera web con NODEJS</h1><br>
-        ${process.env}
+        ${JSON.stringify(process.env)}
     `);
 });
 
