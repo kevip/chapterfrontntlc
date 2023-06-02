@@ -1,19 +1,12 @@
 const express = require('express');
-const server = express();
+const app = express();
 const port = process.env.PORT || 3000;
 
-server.get('/', (req, resp) => {
-    console.log(req);
+app.get('/', (req, resp) => {
 
     return resp.send(`
-        Nuevos cambios!<br>
-        Mi puerto es: ${port} <br>
-        Mis variables de entorno: ${JSON.stringify(process.env)}
+        Mi primera web con NODEJS
     `);
 });
-server.get('/error', (req, resp) => {
-    throw new Error('error de prueba');
-    
-})
 
-server.listen(port, () => console.log('server is running on.... ', port));
+app.listen(port, () => console.log('server is running on.... ', port));
