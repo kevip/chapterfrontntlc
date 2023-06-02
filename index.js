@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 app.get('/', (req, resp) => {
 
     return resp.send(`
-        Mi primera web con NODEJS
+        ${JSON.stringify(process.env)}
     `);
 });
 
