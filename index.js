@@ -8,5 +8,8 @@ app.get('/', (req, resp) => {
         <h1>Mi primera web con NODEJS</h1><br>
     `);
 });
+app.get('/error', () => {
+    throw new Error('Error no esperado');
+});
 
 app.listen(port, () => console.log('server is running on.... ', port));
